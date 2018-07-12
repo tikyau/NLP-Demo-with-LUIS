@@ -5,18 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:receiptLUIS"
         mc:Ignorable="d"
-        Title="Receipt Reader" Height="450" Width="701">
+        Title="Receipt Reader" Height="483.835" Width="871.135">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="162*"/>
             <ColumnDefinition Width="505*"/>
             <ColumnDefinition Width="26*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Margin="376,47,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Grid.Column="1" FontSize="20" Height="31"/>
-        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Height="23" Margin="128,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="389" Grid.ColumnSpan="2" FontSize="14"/>
-        <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Margin="128,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="189" Width="389" Grid.ColumnSpan="2"/>
-        <Label Content="Input :" HorizontalAlignment="Left" Margin="30,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Height="37" Width="77"/>
-        <Label Content="Output :" HorizontalAlignment="Left" Margin="30,83,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Height="37" Width="93"/>
-
+        <Button x:Name="btnSend" Content="Send" HorizontalAlignment="Left" Margin="96,96,0,0" VerticalAlignment="Top" Width="74" Click="Button_Click" Grid.Column="1" FontSize="16" Height="24"/>
+        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Height="23" Margin="30,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="243" Grid.ColumnSpan="2" FontSize="14"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Width="330" Margin="258,96,41,41" Grid.Column="1">
+            <TextBlock x:Name="txtOutput" HorizontalAlignment="Left" Width="330" TextWrapping="WrapWithOverflow" VerticalAlignment="Top"/>
+        </ScrollViewer>
+        <Label Content="Input" HorizontalAlignment="Left" Margin="30,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Height="37" Width="77"/>
+        <Label Content="Output" HorizontalAlignment="Left" Margin="247,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Height="37" Width="93" Grid.Column="1"/>
+        <Button x:Name="btnBrowse" Content="Browse" Grid.Column="1" HorizontalAlignment="Left" Margin="95,140,0,0" VerticalAlignment="Top" Width="75" Height="26" FontSize="16" Click="btnBrowse_Click"/>
+        <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Height="23" Margin="30,140,0,0" VerticalAlignment="Top" Width="243" Grid.ColumnSpan="2" IsReadOnly="True"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Width="330" Margin="30,220,471,0" Grid.ColumnSpan="2">
+            <TextBlock x:Name="txtInputData" HorizontalAlignment="Left" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="330" Foreground="Black"/>
+        </ScrollViewer>
+        <Label Content="Entered Data" HorizontalAlignment="Left" Margin="30,168,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Height="37" Width="139"/>
     </Grid>
 </Window>

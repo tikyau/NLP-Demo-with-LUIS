@@ -3,18 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using System;
 using System.Net.Http;
 using System.Web;
+using System.Windows;
+using Microsoft.Win32;
+using System.IO;
 
 namespace receiptLUIS
 {
@@ -31,9 +25,13 @@ namespace receiptLUIS
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             txtOutput.Text = "";
+            txtInputData.Text = "";
+            txtFilePath.Text = "";
+            txtOutput.Text = "";
             Cursor = Cursors.Wait;
             btnSend.IsEnabled = false;
             string input = txtInput.Text;
+            txtInputData.Text = input;
             txtOutput.Text = await MakeRequest(input);
             btnSend.IsEnabled = true;
             Cursor = Cursors.Arrow;
@@ -66,6 +64,49 @@ namespace receiptLUIS
             var strResponseContent = await response.Content.ReadAsStringAsync();
             // Display the JSON result from LUIS
             return strResponseContent.ToString();
+        }
+
+        private async void btnBrowse_Click(object sender, RoutedEventArgs e)
+        {
+            txtInput.Text = "";
+            txtOutput.Text = "";
+            txtInputData.Text = "";
+            txtFilePath.Text = "";
+            string result = "";
+            string line;
+            string lines = "";
+            Stream myStream = null;
+            OpenFileDialog openFD = new OpenFileDialog();
+            openFD.Filter = "Text files (*.txt)|*.txt";
+            if (openFD.ShowDialog() == true)
+            {
+                try
+                {
+                    if ((myStream = openFD.OpenFile()) != null)
+                    {
+                        Cursor = Cursors.Wait;
+                        btnBrowse.IsEnabled = false;
+                        string filepath = openFD.InitialDirectory + openFD.FileName;
+                            using (StreamReader sr = new StreamReader(filepath))
+                            {
+                            txtFilePath.Text = filepath;
+                            while ((line = sr.ReadLine()) != null)
+                            {
+                                result += await MakeRequest(line) + "\n---------------------------\n";
+                                lines += line + "\n";
+                            }
+                        }
+                        txtInputData.Text = lines;
+                        txtOutput.Text = result;
+                        Cursor = Cursors.Arrow;
+                        btnBrowse.IsEnabled = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: Could not read file from disk. Original error: " + ex.Message);
+                }
+            }
         }
     }
 }

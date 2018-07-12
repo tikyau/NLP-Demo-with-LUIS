@@ -28,18 +28,3 @@ C:\Users\Suharsha Wick\Documents\Visual Studio 2017\Projects\receiptLUIS\receipt
 C:\Users\Suharsha Wick\Documents\Visual Studio 2017\Projects\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.csproj.CoreCompileInputs.cache
 C:\Users\Suharsha Wick\Documents\Visual Studio 2017\Projects\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.exe
 C:\Users\Suharsha Wick\Documents\Visual Studio 2017\Projects\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.pdb
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\bin\Debug\receiptLUIS.exe.config
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\bin\Debug\receiptLUIS.exe
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\bin\Debug\receiptLUIS.pdb
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.csprojResolveAssemblyReference.cache
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\MainWindow.g.cs
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\App.g.cs
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS_MarkupCompile.cache
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS_MarkupCompile.lref
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\MainWindow.baml
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.g.resources
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.Properties.Resources.resources
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.csproj.GenerateResource.Cache
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.csproj.CoreCompileInputs.cache
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.exe
-C:\Users\tiyau\Desktop\StevenChan_Results\receiptLUIS\receiptLUIS\obj\Debug\receiptLUIS.pdb
