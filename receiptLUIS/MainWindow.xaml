@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:receiptLUIS"
         mc:Ignorable="d"
-        Title="Receipt Reader" Height="483.835" Width="871.135">
+        Title="Receipt Reader" Height="483.835" Width="871.135" ResizeMode="NoResize">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="162*"/>
@@ -21,8 +21,8 @@
         <Label Content="Output" HorizontalAlignment="Left" Margin="247,41,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Height="37" Width="93" Grid.Column="1"/>
         <Button x:Name="btnBrowse" Content="Browse" Grid.Column="1" HorizontalAlignment="Left" Margin="95,140,0,0" VerticalAlignment="Top" Width="75" Height="26" FontSize="16" Click="btnBrowse_Click"/>
         <TextBox x:Name="txtFilePath" HorizontalAlignment="Left" Height="23" Margin="30,140,0,0" VerticalAlignment="Top" Width="243" Grid.ColumnSpan="2" IsReadOnly="True"/>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" Width="330" Margin="30,220,471,0" Grid.ColumnSpan="2">
-            <TextBlock x:Name="txtInputData" HorizontalAlignment="Left" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="330" Foreground="Black"/>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Width="330" Margin="37,220,471,0" Grid.ColumnSpan="2">
+            <TextBlock x:Name="txtInputData" HorizontalAlignment="Left" TextWrapping="WrapWithOverflow" VerticalAlignment="Top" Width="310" Foreground="Black"/>
         </ScrollViewer>
         <Label Content="Entered Data" HorizontalAlignment="Left" Margin="30,168,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20" Height="37" Width="139"/>
     </Grid>

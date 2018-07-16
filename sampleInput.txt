@@ -1,3 +1,7 @@
-turn on the left light
-Good morning
-turn off the light
+what is the delivery date for my order
+how much do apples cost
+show warranty information
+remove item #5675234 from the cart
+make a purchase for this product
+what is my item's shipping date
+show me refrigerator prices

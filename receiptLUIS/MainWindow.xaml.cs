@@ -43,8 +43,8 @@ namespace receiptLUIS
             var queryString = HttpUtility.ParseQueryString(string.Empty);
 
             // This app ID is for a public sample app that recognizes requests to turn on and turn off lights
-            var luisAppId = "df67dcdb-c37d-46af-88e1-8b97951ca1c2";
-            var subscriptionKey = "a4d85ab6d72a4d83bad5bac9a5496836 ";
+            var luisAppId = "b8e1ffb1-4882-4145-b57c-031f91b7e0f1";
+            var subscriptionKey = "a4d85ab6d72a4d83bad5bac9a5496836";
 
             // The request header contains your subscription key
             client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", subscriptionKey);
@@ -62,7 +62,6 @@ namespace receiptLUIS
             var response = await client.GetAsync(uri);
 
             var strResponseContent = await response.Content.ReadAsStringAsync();
-            // Display the JSON result from LUIS
             return strResponseContent.ToString();
         }
 
@@ -77,6 +76,7 @@ namespace receiptLUIS
             string lines = "";
             Stream myStream = null;
             OpenFileDialog openFD = new OpenFileDialog();
+            //Limit file open dialog to open only txt files
             openFD.Filter = "Text files (*.txt)|*.txt";
             if (openFD.ShowDialog() == true)
             {
@@ -90,6 +90,7 @@ namespace receiptLUIS
                             using (StreamReader sr = new StreamReader(filepath))
                             {
                             txtFilePath.Text = filepath;
+                            //read the opened file line by line
                             while ((line = sr.ReadLine()) != null)
                             {
                                 result += await MakeRequest(line) + "\n---------------------------\n";
